@@ -7,6 +7,9 @@ from qa.models import SingleQuestion, Subject
 def question_count(request):
     """
     Time: 197 MS for 10 subjects
+    tested with 200 Subjects, 10,000 Questions, and 1 million SingleQuestions. And there are 100 tags.
+    - We may optimize more with Caching.
+    - Some optimization depends on business logic
 
     """
     subjects = Subject.objects.all()[2470:2480]
